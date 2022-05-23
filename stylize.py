@@ -216,8 +216,8 @@ def stylize(
                     # take average of last couple steps to get time per iteration
                     remaining = np.mean(iteration_times[-10:]) * (iterations - i)
                     print(
-                        "Iteration %4d/%4d (%s elapsed, %s remaining)"
-                        % (i + 1, iterations, hms(elapsed), hms(remaining))
+                        "\rIteration %4d/%4d (%s elapsed, %s remaining)"
+                        % (i + 1, iterations, hms(elapsed), hms(remaining)), end=''
                     )
                 else:
                     print("Iteration %4d/%4d" % (i + 1, iterations))
